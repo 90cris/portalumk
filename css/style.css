@@ -1,0 +1,126 @@
+
+  /* la propiedad DISPLAY sirve para darle valor a las cajas en el contenedor (puede ser inline o block"")*/ 
+  /* ej. block: div, h1, p   ___ej. inline: a, span que son enlaces o etiquetas*/
+  /*JUSTITY-CONTENT  sirve para alinear vertical o horizontalmente algun item (puede ser start o end)*/
+  /* principales PROPIEDADES de display son  (block, inline , flex , grid "table ya no se usa mucho")
+  */
+
+  body{
+    text-align: center;
+    margin: 0;
+  
+  }
+
+  main{
+    width: 100%;
+    height: 100vh;
+
+ 
+  }
+  h1{
+    text-align: center;
+    margin: 0 0 10px;
+    font-size: calc(15px + 2vw);
+  }
+  img{
+    width: 200px;
+    height: 150px;
+    vertical-align: top;
+
+
+  }
+  section{    
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 7px solid blueviolet;
+    border-radius: 20px;
+    width: 98%;
+    margin: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+   
+  }
+  .posibilidad{
+    margin-top: 10px;
+    padding: 10px;
+    position: relative; /*sirve paraposicionar el nombre en en la imagen*/ 
+    padding: 15px 25 px;
+    border-radius: 10px;
+
+    
+  }
+.posibilidad:hover{
+  background-color: brown;
+
+}
+  .texto, button{
+    text-transform: capitalize;
+    padding: 6px 12px;
+    position: absolute;
+    top: 75%  ;
+    font-size: calc(12px + 2vw);
+
+  }
+  .texto{
+    left: 10px;
+    background-color: rgba(167, 135, 135, 0.8);
+    width: 90%;
+    text-align: center;
+   
+  }
+
+button{
+  border: 1px solid black;
+  border-radius: 0 6px 6px 0;
+}
+button:hover{
+  background-color: black;
+  color:white;
+
+}
+@media only screen and (min-widht:550px){
+  section{
+    grid-template-columns: repeat(2,1fr);
+  
+  }
+
+}
+@media only screen and (min-widht:1000px){
+  section{
+   width: 80%;
+  
+  }
+
+}
+/*@media only screen and (min-widht:1200px){
+  section{
+  grid-template-columns: repeat(2,1fr);
+  
+  }
+
+}
+*/
+@media only screen and (min-widht:1055px){
+  section{
+ /* grid-template-columns: repeat(4,1fr);*/
+  width: 60%;
+  }
+
+}
+.texto,button{
+ 
+  position: relative;
+  top: auto  ;
+  font-size: calc(12px + 2vw);
+  left: auto;
+  right: auto;
+  width: auto;
+  text-align: center;
+}
+button{
+  border-radius: 10px;
+}
